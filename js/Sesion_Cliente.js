@@ -89,7 +89,7 @@ async function enviarLoginAlServidor(email, password) {
     params.append("correo", email);
     params.append("contrasena", password);
 
-    const respuesta = await fetch("http://localhost:7000/login", {
+    const respuesta = await fetch("http://3.231.210.28:7000/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded"

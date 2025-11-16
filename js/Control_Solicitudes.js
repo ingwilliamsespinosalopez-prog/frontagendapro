@@ -761,3 +761,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 }); // Fin de DOMContentLoaded
+async function obtenerCitasCliente(idCliente) {
+    const res = await fetch(`https://3.231.210.28:7000/cita/cliente/${idCliente}`);
+
+    if (!res.ok) {
+        console.error("Error al obtener citas");
+        return [];
+    }
+
+    return await res.json();
+}
+async function cambiarEstadoCita(idCita, accion) {
+    const res = await fetch(`https://3.231.210.28:7000/cita/cambiarEstado/${idCita}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ accion })
+    });
+
+    return await res.json();
+}
+async function marcarPagada(idCita) {
+    const res = await fetch(`https://3.231.210.28:7000/cita/pago/${idCita}`, {
+        method: "PUT"
+    });
+
+    return await res.json();
+}
+
