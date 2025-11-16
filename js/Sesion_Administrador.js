@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             // ===== PETICIÓN AL BACKEND =====
-            const resp = await fetch("http://localhost:7000/login", {
+            const resp = await fetch("http://3.231.210.28:7000/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: formData.toString()
