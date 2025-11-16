@@ -1,0 +1,557 @@
+/* ===== GESTOR DE PAGOS - CSS ESPECÍFICO ===== */
+
+/* NOTA: Todos los estilos de body, .menu-lateral, .contenido-principal, 
+   .boton-hamburguesa, .overlay-menu y .item-menu
+   fueron eliminados. Ahora los maneja 'Perfil_Administrador.css' */
+
+/* ===== ENCABEZADO ===== */
+.seccion-encabezado {
+    margin-bottom: 30px;
+}
+
+.titulo-pagina {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.subtitulo-pagina {
+    font-size: 15px;
+    color: #666;
+}
+
+/* ===== ESTADÍSTICAS DE PAGOS ===== */
+.seccion-estadisticas-pagos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.tarjeta-estadistica-pago {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-estadistica-pago:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.label-estadistica-pago {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.numero-estadistica-pago {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.icono-estadistica-pago {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icono-estadistica-pago svg {
+    width: 28px;
+    height: 28px;
+}
+
+.icono-total-cobrado {
+    background-color: #dbeafe;
+}
+
+.icono-total-cobrado svg {
+    stroke: #1e40af;
+}
+
+.icono-pagadas {
+    background-color: #d1fae5;
+}
+
+.icono-pagadas svg {
+    stroke: #059669;
+}
+
+.icono-proceso {
+    background-color: #dbeafe;
+}
+
+.icono-proceso svg {
+    stroke: #2563eb;
+}
+
+.icono-pendientes {
+    background-color: #fed7aa;
+}
+
+.icono-pendientes svg {
+    stroke: #ea580c;
+}
+
+/* ===== SECCIÓN TABLA ===== */
+.seccion-tabla-pagos {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+}
+
+.controles-tabla-pagos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.buscador-pagos {
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+}
+
+.icono-buscar {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    stroke: #999;
+}
+
+.input-buscar-pagos {
+    width: 100%;
+    padding: 10px 12px 10px 38px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.input-buscar-pagos:focus {
+    outline: none;
+    border-color: #0891b2;
+    box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.1);
+}
+
+.filtros-pagos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filtro-select {
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    background-color: white;
+}
+
+.filtro-select:focus {
+    outline: none;
+    border-color: #0891b2;
+}
+
+.acciones-tabla {
+    display: flex;
+    gap: 10px;
+}
+
+.boton-ordenar {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.boton-ordenar:hover {
+    background-color: #f9f9f9;
+    border-color: #0891b2;
+}
+
+.boton-ordenar svg {
+    width: 20px;
+    height: 20px;
+    stroke: #666;
+}
+
+.boton-exportar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-exportar:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.boton-exportar svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* ===== TABLA ===== */
+.tabla-contenedor {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.tabla-pagos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-pagos thead {
+    background-color: #f9f9f9;
+}
+
+.tabla-pagos th {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.tabla-pagos td {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap; /* Evita que el contenido se rompa en varias líneas */
+}
+
+.tabla-pagos tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.badge-estado {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    min-width: 80px; /* Para que 'Pendiente' y 'Pagado' no se vean apretados */
+    text-align: center;
+}
+
+.badge-estado.pagado {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.badge-estado.en-proceso {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.badge-estado.pendiente {
+    background-color: #fed7aa;
+    color: #9a3412;
+}
+
+.btn-detalles {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f0f9ff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-detalles:hover {
+    background-color: #0891b2;
+}
+
+.btn-detalles svg {
+    width: 18px;
+    height: 18px;
+    stroke: #0891b2;
+}
+
+.btn-detalles:hover svg {
+    stroke: white;
+}
+
+/* ===== PAGINACIÓN ===== */
+.paginacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.info-paginacion {
+    font-size: 14px;
+    color: #666;
+}
+
+.controles-paginacion {
+    display: flex;
+    gap: 8px;
+}
+
+/* Selector específico para los números de página */
+.controles-paginacion#numeros-pagina {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-pagina {
+    padding: 8px 14px;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-pagina:hover:not(:disabled) {
+    background-color: #f9f9f9;
+    border-color: #0891b2;
+}
+
+.btn-pagina.activo {
+    background-color: #0891b2;
+    color: white;
+    border-color: #0891b2;
+}
+
+.btn-pagina:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ===== MODALES (ESPECÍFICOS DE ESTA PÁGINA) ===== */
+/* Nota: .modal-overlay está en Perfil_Administrador.css */
+
+.modal-confirmacion {
+    background-color: white;
+    border-radius: 16px;
+    padding: 35px 30px;
+    max-width: 420px;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.activo .modal-confirmacion {
+    transform: scale(1);
+}
+
+.modal-icono-info {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    background-color: #0891b2;
+}
+
+.modal-icono-info svg {
+    width: 32px;
+    height: 32px;
+    stroke: white;
+    stroke-width: 2.5;
+}
+
+.modal-titulo-confirmacion {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.modal-mensaje-confirmacion {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 28px;
+}
+
+.botones-confirmacion {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.boton-cancelar-modal,
+.boton-confirmar-verde {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.boton-cancelar-modal {
+    background-color: #f5f5f5;
+    color: #666;
+}
+
+.boton-cancelar-modal:hover {
+    background-color: #e0e0e0;
+}
+
+.boton-confirmar-verde {
+    background-color: #10b981;
+    color: white;
+}
+
+.boton-confirmar-verde:hover {
+    background-color: #059669;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* ===== ESTILOS ADICIONALES PARA ACCIONES DE TABLA ===== */
+.btn-accion-pagar {
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #065f46; /* Verde oscuro */
+    background-color: #d1fae5; /* Verde claro */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-accion-pagar:hover {
+    background-color: #065f46; /* Verde oscuro */
+    color: white;
+    box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
+}
+
+/* Estilo para el botón cuando ya está pagado (deshabilitado) */
+.btn-accion-pagar:disabled {
+    background-color: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .seccion-estadisticas-pagos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Estilos de layout (como .contenido-principal) ya están en Perfil_Administrador.css */
+    
+    .seccion-estadisticas-pagos {
+        grid-template-columns: 1fr;
+    }
+    
+    .controles-tabla-pagos {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .buscador-pagos {
+        width: 100%;
+    }
+    
+    .filtros-pagos {
+        width: 100%;
+    }
+    
+    .filtro-select {
+        flex: 1;
+    }
+    
+    .acciones-tabla {
+        width: 100%;
+    }
+    
+    .boton-exportar {
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .paginacion {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .controles-paginacion {
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-pagina {
+        font-size: 24px;
+    }
+    
+    .tabla-contenedor {
+        overflow-x: scroll;
+    }
+    
+    .tabla-pagos {
+        min-width: 800px;
+    }
+    
+    .seccion-tabla-pagos {
+        padding: 15px;
+    }
+}
